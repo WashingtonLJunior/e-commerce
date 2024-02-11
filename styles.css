@@ -1,0 +1,134 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+ 
+header{
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav{
+    margin-top: 10px;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}   
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2980b9;
+}
+
+/*------- M A I N --------*/
+
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.product-card {
+    position: relative; /* Para posicionar a imagem secundária em relação à principal */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease;/* Adiciona transição para a alteração de imagem*/
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Inicia com opacidade 0 para ser exibida apenas no hover*/
+}
+
+.product-card:hover .main-image {
+    opacity: 0; /* Esconde a imagem principal no hover */
+}
+
+.product-card:hover .hover-image {
+    opacity: 1; /* Exibe a imagem secundaria no hover */
+}
+
+.oferta{
+    background-color: #29b963;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.price {
+    font-size: 1.2em;
+    color: #e74c3c;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.price-pois{
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #646464;
+    display: block;
+}
+
+.add-to-cart {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart:hover {
+    background: linear-gradient(to right, #2980b9, #3498db);
+    transform: scale(1.05);
+}
+
+
+/*----- F O O T E R ----------*/
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
